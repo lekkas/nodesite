@@ -1,0 +1,24 @@
+extends layout
+block extraheadcontent
+   script(src="/ckeditor/ckeditor.js")
+   script(src="js/blog.js")
+
+block content
+  - var auth = (options.auth)?true:false;
+  article
+    section
+      h2(contenteditable=''+auth, id="title", class="titleeditor") From anonymity to visibility: Exposing our true identity.
+    .article-header <strong>Published:</strong> #{options.date}
+    section
+      div(contenteditable=''+auth, id="summary", class="summaryeditor") Summary Content
+    hr
+    section
+      div(contenteditable=''+auth, id="content", class="contenteditor") Content
+    hr
+    div
+      a(href="/blogimages", style="float: right;") Browse/Upload images
+    br
+    div(style="float: right;")
+      button(id="submitButton", onclick="createBlogPost()") Save
+    section
+      div(contenteditable=''+auth, id="urlfriendlytitleeditor", class="urlfriendlytitleeditor", style="float: right;") url-friendly-title

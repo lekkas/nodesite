@@ -1,0 +1,27 @@
+extends layout
+block content
+  h2 Tumblr Quote Feed
+  hr
+  each post in blog.posts
+    - if(post.type == "video") continue;
+    div.article-container
+      article(style="float: left;")
+        .quote-container
+          img(src="images/quote_start_s.png" style="height: auto; margin-right: 10px; vertical-align: text-top;")
+          - if(post.type == "regular")
+            script.
+              console.log("found regular");
+            - var text = post["regular-body"];
+            - var author = post["regular-title"];
+          - else if(post.type == "quote")
+            script.
+              console.log("found quote");
+            - var text = post["quote-text"];
+            - var author = post["quote-source"];
+          span!= text
+          img(src="images/quote_end_s.png" style="height: auto; margin-left: 10px; vertical-align: text-bottom;")
+          div.article-footer
+            strong!= author
+          p
+      
+    

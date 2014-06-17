@@ -1,0 +1,62 @@
+doctype 5
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1")
+    meta(name="description", content="Lekkas Konstantinos&#39; Personal Page")
+    meta(name="keywords", content="C,Java,Linux,Web Services,Lekkas")
+    meta(name="author", content="Lekkas Konstantinos")
+    
+    link(rel="stylesheet", href="/stylesheets/base.css")
+    link(rel="stylesheet", href="/stylesheets/skeleton.css")
+    link(rel="stylesheet", href="/stylesheets/layout.css")
+    
+    link(rel="shortcut icon", type="image/x-icon", href="/images/favicon.ico")
+  
+    script(src="/js/jquery-latest.js")
+    
+    block extraheadcontent
+    
+    title Konstantinos Lekkas | About
+  
+  - var classes = ["container", options.bodyClass, "clearfix"];
+  body(class=classes)
+    header(class="sixteen columns")
+        hr
+        nav.navheader
+          ul
+            li.about
+              a(href="/about") About
+            li.projects
+              a(href="/projects") Projects
+            li.code
+              a(href="/code") Code
+            li.books
+              a(href="/books") Books
+            li.blog
+              a(href="/blog") Blog
+            li.quotes
+              a(href="/quotes") Quotes
+        hr
+
+    section.eleven.columns.alpha
+      block content
+    aside.four.columns.omega.offset-by-one
+      .aside-container
+        div.signature Lekkas Konstantinos
+        img(src="/images/profilepic.jpg" alt="This is me", class="aside-img")
+        .mail-contact
+          a(href="mailto:kwstasl@lekkas.org") kwstasl@gmail.com
+        .twitter-contact
+          a(href="https://twitter.com/@kwstasl") @kwstasl
+        .linknedin-contact
+          a(href="http://gr.linkedin.com/in/lekkaskonstantinos") Lekkas Konstantinos
+        .phone-contact
+          span +30 693 48.44.181
+      //a(href="/login", style="margin-top: 0; padding-top: 0; float: right") Login
+      //br
+      //a(href="/logout", style="margin-top: 0; padding-top: 0; float: right") Logout
+      //br
+      //- var auth = (options.auth)?true:false;
+      //status(style="float: right") Authenticated: #{auth}
+      block blogactions

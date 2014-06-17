@@ -1,0 +1,24 @@
+extends layout
+block content
+  h2 Blog Posts
+  hr
+  - for (var i = 0; i < options.blogPosts.rows.length; i++)
+    - var title = options.blogPosts.rows[i].value.URLFriendlyTitle
+    article
+      h2
+        a(href='/blog/'+title, class="blogposttitle")!= options.blogPosts.rows[i].value.title
+      div(style="width: 8em;")
+        .article-header!= 'Published: '
+          strong(style="float: right;") #{options.blogPosts.rows[i].value.pubDatePretty}
+        - if(options.blogPosts.rows[i].value.lastEditDate != null)
+          .article-header!= 'Last edit: '
+            strong(style="float: right;") #{options.blogPosts.rows[i].value.lastEditDate}
+      summary!= options.blogPosts.rows[i].value.summary
+      .article-footer
+        a(href='/blog/'+title) >>
+    hr.up
+    hr.down
+block blogactions
+  - var auth = (options.auth)?true:false;
+  if (auth == true)
+    a(href="/newpost", style="margin-top: 0; padding-top: 0; float: right; color: rgba(0, 0, 0, 0.1);") Create new post

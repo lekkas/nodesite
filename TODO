@@ -1,0 +1,7 @@
+TODO - 25 Aug 2013
+------------------
+1) Blog navigation
+2) Set up CouchDB
+3) Create the 'new post' interface. Should have: 
+  2.1) Placeholder for image + summary - to be shown in the blog list
+  2.2) Placeholder for article.

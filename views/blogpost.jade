@@ -1,0 +1,9 @@
+extends layout
+block content
+  article
+    h2!= options.blogPost.title
+    .article-header!= 'Published: <strong>'+options.blogPost.pubDatePretty+'</strong>'
+    summary!= options.blogPost.summary
+    hr(style="width: 100%")
+    section.content!= options.blogPost.content
+

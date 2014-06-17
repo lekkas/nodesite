@@ -1,0 +1,14 @@
+extends layout
+block content
+  div(style="margin-top: 5em;")
+    h4(style="float: left; margin-right: 1em; margin-left: 2em;") Upload File: 
+    form(method="POST", action="/upload", enctype="multipart/form-data", style="float: left;")
+      input(type="file", name="newimage")
+      input(type="submit")
+  - for(i=0; i < options.imageList.length; i++)
+    - link = 'images/blog/'+options.imageList[i];
+    //div #{options.imageList}
+    a(href=link, style="float: left;")
+      img(src=link, style="max-width: 20em; height: auto; margin: 2em;align: bottom;")
+    br
+    

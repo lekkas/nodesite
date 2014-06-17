@@ -1,0 +1,14 @@
+extends layout
+block content
+  form(action='/auth',method='post', id="loginform")
+      fieldset(data-role='controlgroup')
+        div
+          label(for='username') Username: 
+          input(id='username',type='text',value='',name='username') 
+        br
+        div
+          label(for='password') Password: 
+          input(id='password',type='password',value='',placeholder='',name='password')
+        br
+        div
+          input(type='submit',value='Submit')

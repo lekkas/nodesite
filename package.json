@@ -1,0 +1,25 @@
+{
+  "name": "nodesite",
+  "version": "0.0.1",
+  "description": "Personal page/blog powered by node.js",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"No test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lekkas/nodesite"
+  },
+  "keywords": [
+    "blog",
+    "couchdb"
+  ],
+  "private" : true,
+  "author": "Konstantinos Lekkas <kwstasl@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "~3.3.5",
+    "jade": "~0.35.0",
+    "request": "~2.27.0"
+  }
+}
