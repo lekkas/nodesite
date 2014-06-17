@@ -5,7 +5,7 @@ var dateUtil = require('./dateUtil.js');
 
 var app = express();
 var PORT = (process.env.C9_PORT===undefined)?31337:process.env.PORT;
-var couchdbHost = "http://www.lekkas.org/";
+var couchdbHost = "http://couchdb.lekkas.org/";
 
 /**
  * Cooke session object.
